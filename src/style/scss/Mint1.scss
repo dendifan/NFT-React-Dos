@@ -1,18 +1,27 @@
-.dos-screen {
-    background-color: #000;
-    color: #0f0;
-    font-family: "Courier New", Courier, monospace;
+body{
+    overflow: hidden;
+}
+@font-face {
+    font-family: 'DOS Font';
+    src: url('../fonts/ModernDOS9x14.ttf') format('truetype');
+}
+.mint1-screen {
+    background: url('../images/background_screen.jpg');
+    color: #53fb54;
+    font-family: 'DOS Font', Courier, monospace;
     width: 100%;
-    // border: 5px solid #0f0;
-    padding: 10px;
-}
+    height: 100vh;
+    padding: 80px;
 
-.text-row {
-    line-height: 1.5em;
-}
-
-.blink {
-    animation: blink 1s step-start infinite;
+    
+    .text-row {
+        line-height: 1.5em;
+        display: inline;
+    }
+    
+    .blink {
+        animation: blink 1s step-start infinite;
+    }
 }
 
 @keyframes blink {
@@ -21,6 +30,6 @@
         color: transparent;
     }
     50% {
-        color: #0f0;
+        color: #53fb54;
     }
 }

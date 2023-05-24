@@ -13,46 +13,45 @@ const Mint3 = () => {
                 <img src={mayorImg} alt='NYC' className='logo-image'/>
             </Row>
             <Row className='expires-div'>
-                <Col className='lg-6 md-6 sm-6 xs-6'>
+                <Col lg={6} md={6} sm={6} xs={6}>
                     <img src={skyscraperNFTImg} className='nft-img'/>
                 </Col>
-                <Col className='lg-6 md-6 sm-6 xs-6 mt-4 d-flex flex-column right-div'>
-                    <div className='ms-auto me-auto connect-wallet justify-content-center align-items-center d-flex'>
-                        Connect Wallet
-                    </div>
-                    <div className='d-flex mt-2 ms-auto me-auto'>
-                        <div onClick={() => {setNftCount(nftCount - 1)}} className='nft-minus d-flex justify-content-center align-items-center'>-</div>
-                        <div className='nft-number d-flex justify-content-center align-items-center'>
-                            Purchase {nftCount} Land Deeds
-                        </div>
-                        <div onClick={() => {setNftCount(nftCount + 1)}} className='nft-plus d-flex justify-content-center align-items-center'>+</div>
-                    </div>
-                    <div className='d-flex justify-content-center my-2'>
-                        PRICE 0.085 ETH
-                    </div>
-                    <div className='d-flex mt-2 ms-auto me-auto nft-rest justify-content-center align-items-center'>
-                        980/2500 LAND DEEDS MINTED
-                    </div>
-                    <div className='ms-auto me-auto mt-3'>
-                        <span className='ms-auto me-auto'>
-                        LEGENDS OF NYC . . . MINT YOUR LAND DEEDS
-                        </span>
-                        <br/>
-                        <span>
-                        ALIGN TO YOUR CHOSEN FACTION AND LET US RISE TOGETHER. . .
-                        </span>
-                        <br />
-                        <span>
-                        WE WILL FIGHT THE MAN UNTIL THE TIME WILL COME 
-                        </span>
-                        <br />
-                        <span>
-                        WHERE WE HAVE TO FIGHT FOR OUR FACTIONS . . .
-                        </span>
-                        
-                    </div>
+                <Col lg={6} md={6} sm={6} xs={6} className='mt-4 right-div'>
+                    <Row>
+                        <Col lg={9} md={9} sm={9} xs={9} className='d-flex flex-column'>
+                            <div className='ms-auto me-auto connect-wallet justify-content-center align-items-center d-flex'>
+                                Connect Wallet
+                            </div>
+                            <div className='d-flex mt-2 ms-auto me-auto'>
+                                <div onClick={() => {setNftCount(nftCount - 1)}} className='nft-minus d-flex justify-content-center align-items-center'>-</div>
+                                <div className='nft-number d-flex justify-content-center align-items-center'>
+                                    Purchase {nftCount} Land Deeds
+                                </div>
+                                <div onClick={() => {setNftCount(nftCount + 1)}} className='nft-plus d-flex justify-content-center align-items-center'>+</div>
+                            </div>
+                            <div className='d-flex justify-content-center my-2'>
+                                PRICE 0.085 ETH
+                            </div>
+                            <div className='d-flex mt-2 ms-auto me-auto nft-rest justify-content-center align-items-center'>
+                                980/2500 LAND DEEDS MINTED
+                            </div>
+                            <div className='d-flex flex-column align-items-center mt-3'>
+                                <div>
+                                LEGENDS OF NYC . . . MINT YOUR LAND DEEDS
+                                </div>
+                                <div>
+                                ALIGN TO YOUR CHOSEN FACTION AND LET US RISE TOGETHER. . .
+                                </div>
+                                <div>
+                                WE WILL FIGHT THE MAN UNTIL THE TIME WILL COME 
+                                </div>
+                                <div>
+                                WHERE WE HAVE TO FIGHT FOR OUR FACTIONS . . .
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </Col>
-                
             </Row>    
         </div>
   )
