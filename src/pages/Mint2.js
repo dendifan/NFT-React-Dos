@@ -6,7 +6,7 @@ import mayorImg from '../style/images/skyscraper_logo.png';
 import { Row } from 'react-bootstrap';
 const Mint2 = () => {
     const navigate = useNavigate();
-    const [countdownDate, setCountdownDate] = useState(new Date('2023-05-23T11:31:00').getTime());
+    const [countdownDate, setCountdownDate] = useState(new Date('2023-05-25T11:31:00').getTime());
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,

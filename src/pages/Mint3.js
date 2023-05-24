@@ -6,7 +6,7 @@ import mayorImg from '../style/images/skyscraper_logo_empiresrise.png';
 import skyscraperNFTImg from '../style/images/skyscraper_NFT.png';
 import { Row, Col } from 'react-bootstrap';
 const Mint3 = () => {
-    const [nftCount, setNftCount] = useState(0);
+    const [nftCount, setNftCount] = useState(1);
     return (
         <div className='expires'>
             <Row className='d-flex justify-content-center'>
@@ -23,14 +23,14 @@ const Mint3 = () => {
                                 Connect Wallet
                             </div>
                             <div className='d-flex mt-2 ms-auto me-auto'>
-                                <div onClick={() => {setNftCount(nftCount - 1)}} className='nft-minus d-flex justify-content-center align-items-center'>-</div>
+                                <div onClick={() => {nftCount>0? setNftCount(nftCount - 1):setNftCount(0)}} className='nft-minus d-flex justify-content-center align-items-center'>-</div>
                                 <div className='nft-number d-flex justify-content-center align-items-center'>
                                     Purchase {nftCount} Land Deeds
                                 </div>
                                 <div onClick={() => {setNftCount(nftCount + 1)}} className='nft-plus d-flex justify-content-center align-items-center'>+</div>
                             </div>
                             <div className='d-flex justify-content-center my-2'>
-                                PRICE 0.085 ETH
+                                PRICE {(nftCount*0.085).toFixed(3)} ETH
                             </div>
                             <div className='d-flex mt-2 ms-auto me-auto nft-rest justify-content-center align-items-center'>
                                 980/2500 LAND DEEDS MINTED
