@@ -5,8 +5,24 @@ import '../style/scss/Mint3.scss';
 import mayorImg from '../style/images/skyscraper_logo_empiresrise.png';
 import skyscraperNFTImg from '../style/images/skyscraper_NFT.png';
 import { Row, Col } from 'react-bootstrap';
+import Web3 from 'web3';
+
 const Mint3 = () => {
     const [nftCount, setNftCount] = useState(1);
+    const web3 = new Web3(window.ethereum);
+    const connectWallet = async () => {
+        if (window.ethereum) {
+          try {
+            await window.ethereum.enable();
+            console.log('Connected to wallet:', await web3.eth.getCoinbase());
+            // code to execute after wallet connection is successful
+          } catch (error) {
+            console.error(error);
+          }
+        } else {
+          console.error('MetaMask is not installed');
+        }
+    };
     return (
         <div className='expires'>
             <Row className='d-flex justify-content-center'>
@@ -19,7 +35,7 @@ const Mint3 = () => {
                 <Col lg={6} md={6} sm={6} xs={6} className='mt-4 right-div'>
                     <Row>
                         <Col lg={9} md={9} sm={9} xs={9} className='d-flex flex-column'>
-                            <div className='ms-auto me-auto connect-wallet justify-content-center align-items-center d-flex'>
+                            <div  onClick={connectWallet} className='ms-auto me-auto connect-wallet justify-content-center align-items-center d-flex'>
                                 Connect Wallet
                             </div>
                             <div className='d-flex mt-2 ms-auto me-auto'>
