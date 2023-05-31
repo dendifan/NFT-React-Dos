@@ -1,5 +1,7 @@
 body{
     overflow: hidden;
+    // display: flex;
+    // flex-wrap: wrap;
 }
 @font-face {
     font-family: 'DOS Font';
@@ -7,6 +9,9 @@ body{
 }
 .mint1-screen {
     background: url('../images/background_screen.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: #53fb54;
     font-family: 'DOS Font', Courier, monospace;
     width: 100%;
@@ -31,5 +36,10 @@ body{
     }
     50% {
         color: #53fb54;
+    }
+}
+@media (max-width: 768px) {
+    .mint1-screen {
+        padding: 20px;
     }
 }

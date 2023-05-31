@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/scss/Mint2.scss';
-import mayorImg from '../style/images/skyscraper_logo.png';
+import mayorImg from '../style/images/skyscraper_logo.webp';
 import { Row } from 'react-bootstrap';
 const Mint2a = () => {
     const navigate = useNavigate();
@@ -12,7 +12,6 @@ const Mint2a = () => {
         function handleKeyDown(event) {
         
         if (event.keyCode === 13) {
-            console.log('Enter key pressed');
             if(typedLetters==='skyscraper'){
                 navigate('/mint3');
             }

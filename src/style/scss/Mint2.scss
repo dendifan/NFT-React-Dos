@@ -10,6 +10,9 @@ body {
 
 .mayor {
     background: url('../images/background_screen.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: #41f341;
     height: 100vh;
 
@@ -48,5 +51,10 @@ body {
     }
     50% {
         color: #53fb54;
+    }
+}
+@media (max-width: 768px) {
+    .mint-time-div {
+        width: 250px !important;
     }
 }

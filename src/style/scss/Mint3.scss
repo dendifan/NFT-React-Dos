@@ -8,9 +8,14 @@ body{
 
 .expires {
     background: url('../images/background_screen.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: #41f341;
     height: 100vh;
-
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px;
     .logo-image {
         width: 400px;
     }
@@ -19,21 +24,43 @@ body{
         width: 50vh;
         float: right;
     }
+    .nft-img-mob {
+        width: 35vh;
+    }
     
     .right-div {
-        // padding-right: 50px;
+        padding-top: 40px;
     }
-    
-    .expires-div {
-        margin-top: -20vh;
+    .right-div-mob {
+        padding-top: 15px;
     }
-    
+    .expires-text {
+        margin-top: -10vh;
+        height: 150px;
+    }
+    button{
+        background-color: transparent !important;
+        color: #07fa08 !important;
+        border-color: #07fa08 !important;
+    }
+    button:hover{
+        background-color: #07fa08 !important;
+        color: black !important;
+        border-color: #07fa08 !important;
+    }
     .connect-wallet {
         width: 220px;
         height: 50px;
         border: 2px solid #07fa08;
     }
     .connect-wallet:hover {
+        cursor: pointer;
+    }
+    .connect-wallet-mob {
+        width: 200px;
+        border: 2px solid #07fa08;
+    }
+    .connect-wallet-mob:hover {
         cursor: pointer;
     }
     .nft-minus, .nft-number, .nft-plus {
@@ -44,11 +71,10 @@ body{
         height: 50px;
         margin-left: 3px;
         margin-right: 3px;
-        font-size: 35px;
+        font-size: 30px;
         /* padding-top: 0px; */
         // padding-bottom: 5px;
     }
-    
     .nft-minus:hover, .nft-plus:hover {
         cursor: pointer;
     }
@@ -62,5 +88,56 @@ body{
         width: 310px;
         height: 50px;
         border: 2px solid #07fa08;
+    }
+    .nft-minus-mob, .nft-number-mob, .nft-plus-mob {
+        border: 2px solid #07fa08;
+    }
+    .nft-minus-mob, .nft-plus-mob {
+        width: 40px;
+        height: 40px;
+        margin-left: 3px;
+        margin-right: 3px;
+        font-size: 25px;
+        /* padding-top: 0px; */
+        // padding-bottom: 5px;
+    }
+    .nft-minus-mob:hover, .nft-plus-mob:hover {
+        cursor: pointer;
+    }
+    
+    .nft-number-mob {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    .nft-rest-mob {
+        width: 290px;
+        height: 40px;
+        border: 2px solid #07fa08;
+    }
+}
+@media (max-width: 768px) {
+    .expires-text {
+        height: 210px !important;
+        margin-top: -10vh !important;
+    }
+}
+@media (max-width: 334px) {
+    .expires-text {
+        height: 240px !important;
+        margin-top: -10vh !important;
+    }
+}
+@media (max-width: 320px) {
+    .expires-text {
+        height: 270px !important;
+        margin-top: -10vh !important;
+    }
+}
+@media (max-width: 263px) {
+    .expires-text {
+        height: 310px !important;
+        margin-top: -10vh !important;
     }
 }
